@@ -1,9 +1,10 @@
 # Site settings
+encoding: UTF-8
 title: 文革2.0新闻事件提交
 subtitle: 跟意识形态控制相关的新闻事件
 email: chinatimeline@mail2tor.com
 description: Test
-baseurl: "submit"
+baseurl: "/submit"
 url: "https://chinatimeline.github.io/"
 locale: en
 github_username:  chinatimeline
