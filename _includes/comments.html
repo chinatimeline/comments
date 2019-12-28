@@ -1,5 +1,5 @@
 <div class="comments">
-  <h3>事件</h3>
+  <h3>最近提交事件</h3>
   {% assign comments = site.data.comments.test-slug | sort %}
   {% for comment in comments reversed %}
     {% assign commentData = comment[1] %}
