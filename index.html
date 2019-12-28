@@ -4,8 +4,8 @@ layout: default
 
 <p>返回 <a href="https://chinatimeline.github.io/">主页</a>.</p>
 
-var ratings = [1, 2, 3, 4, 5]
-var types = ["重大历史事件",
+{% var ratings = [1, 2, 3, 4, 5] %}
+{% var types = ["重大历史事件",
               "文化文艺娱乐",
               "数字监控与墙",
               "建立宣传网站",
@@ -13,7 +13,7 @@ var types = ["重大历史事件",
               "整治自由派社群"
               "打击学术自由",
               "干预互联网市场",
-              "党团人事组织"]
+              "党团人事组织"] %}
 
 <form method="POST" action="{{ site.staticman.api }}">
   <input name="options[redirect]" type="hidden" value="{{ site.url }}">
