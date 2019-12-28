@@ -4,29 +4,18 @@ layout: default
 
 <p>返回 <a href="https://chinatimeline.github.io/">主页</a>.</p>
 
-{% var ratings = [1, 2, 3, 4, 5] %}
-{% var types = ["重大历史事件",
-              "文化文艺娱乐",
-              "数字监控与墙",
-              "建立宣传网站",
-              "进驻社交媒体",
-              "整治自由派社群",
-              "打击学术自由",
-              "干预互联网市场",
-              "党团人事组织"] %}
-
 <form method="POST" action="{{ site.staticman.api }}">
   <input name="options[redirect]" type="hidden" value="{{ site.url }}">
   <input name="options[slug]" type="hidden" value="test-slug">
   <label>日期: <input name="fields[date]" type="date"></label><br>
   <label>事件: <br><textarea name="fields[event]" rows="12" cols="36"></textarea></label><br>
   <label>类型:
-    {% for type in types %}
+    {% for type in site.data.eventtype %}
     <input name="fields[type]" type="radio" value="{{ t }}">{{ type }}<br>
     {% endfor %}
   </label><br>
   <label>重要性:
-    {% for i in ratings %}
+    {% for i in site.data.ratings %}
     <input name="fields[significance]" type="radio" value="{{ i }}"> {{ i }}
     {% endfor %}
   </label><br>
