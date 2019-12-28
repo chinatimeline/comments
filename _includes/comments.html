@@ -8,10 +8,7 @@
       <div class="comment-event">
         {{ commentData.event | markdownify }}
       </div>
-      <p class="comment-date">{{ commentData.date | date: "%Y-%mm-%dd" }}</p>,
-      <div class="comment-type">类型：{{ commentData.type }}</div>,
-      <div class="comment-significance">影响：{{ commentData.significance }}星</div>,
-      <div> <a href="{{ commentData.url }}"> 相关新闻</a></div>
+      <p class="comment-date">{{ commentData.date | date: "%Y-%m-%d" }}, 类型：{{ commentData.type }}, 影响：{{ commentData.significance }}星, <a href="{{ commentData.url }}">相关新闻</a> </p>
     </article>
   {% endfor %}
 </div>
