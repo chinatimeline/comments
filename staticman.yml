@@ -39,7 +39,7 @@ comments:
   # with a `type` property, which configures the generated field, or any value
   # to be used directly (e.g. a string, number or array)
   generatedFields:
-    date:
+    submitTime:
       type: date
       options:
         format: "timestamp-seconds"
