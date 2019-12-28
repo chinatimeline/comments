@@ -1,16 +1,16 @@
 # Site settings
-title: Minimal Staticman v3 Demo
-subtitle: A barebone GitHub Pages with static comments
-email: your-email@domain.com
+title: 文革2.0新闻事件提交
+subtitle: 跟意识形态控制相关的新闻事件
+email: chinatimeline@mail2tor.com
 description: Test
 baseurl: ""
-url: "https://vincenttam.github.io/TestStaticmanLab/"
+url: "https://chinatimeline.github.io/submit/"
 locale: en
-github_username:  VincentTam
+github_username:  chinatimeline
 
 # Build settings
 markdown: kramdown
 
 staticman:
   api: "https://staticman3.herokuapp.com/v3/entry/github/vincenttam/TestStaticmanLab/master/comments"
-  path: "_data/comments/test-slug"
+  path: "_data/events/test-slug"

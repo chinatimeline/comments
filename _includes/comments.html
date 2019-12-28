@@ -1,14 +1,16 @@
 <div class="comments">
-  <h3>Comments</h3>
-  {% assign comments = site.data.comments.test-slug | sort %}
+  <h3>事件</h3>
+  {% assign comments = site.data.events.test-slug | sort %}
   {% for comment in comments reversed %}
     {% assign commentData = comment[1] %}
     <article class="comment">
-      <h4 class="comment-name">{{ commentData.name }}</h4>
-      <p class="comment-time">{{ commentData.date | date: "%b %d, %Y %H:%M:%S" }}</p>
-      <div class="comment-msg">
-        {{ commentData.message | markdownify }}
+      <h4 class="comment-type">{{ commentData.type }}</h4>
+      <p class="comment-date">{{ commentData.date | date: "%b %d, %Y" }}</p>
+      <div class="comment-event">
+        {{ commentData.event | markdownify }}
       </div>
+      <p class="comment-significance">{{ commentData.significance }}</p>
+      <p <a href="{{ commentData.url }}">相关新闻</a></p>
     </article>
   {% endfor %}
 </div>
