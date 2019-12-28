@@ -7,9 +7,9 @@ layout: default
 <form method="POST" action="{{ site.staticman.api }}">
   <input name="options[redirect]" type="hidden" value="{{ site.url }}">
   <input name="options[slug]" type="hidden" value="test-slug">
-  <label>日期: <input name="fields[date]" type="date"></label><br>
-  <label>事件: <br><textarea name="fields[event]" rows="12" cols="36"></textarea></label><br>
-  <label>类型:
+  <label>发生日期: <input name="fields[date]" type="date"></label><br>
+  <label>事件描述: <br><textarea name="fields[event]" rows="12" cols="48"></textarea></label><br>
+  <label>所属类型: <br>
     {% for type in site.data.eventtype %}
     <input name="fields[type]" type="radio" value="{{ t }}">{{ type }}<br>
     {% endfor %}
