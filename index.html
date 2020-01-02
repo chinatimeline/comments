@@ -2,24 +2,24 @@
 layout: default
 ---
 
-<p>返回 <a href="https://chinatimeline.github.io/">主页</a>.</p>
+<div class="container-post">
+  <article class="post">
+    <h1>游客留言板</h1>
 
-<form method="POST" action="{{ site.staticman.api }}">
-  <input name="options[redirect]" type="hidden" value="{{ site.url }}">
-  <input name="options[slug]" type="hidden" value="test-slug">
-  <div style="width:100%; display:table">
-    <label style="display:table-cell;width=1px;">用户名:<input name="fields[user]" type="text" placeholder="必填" ></label>
-    <label style="display:table-cell;width=1px;">邮箱Email:</label> <input name="fields[email]" type="email" placeholder="可选">
-  </div>
-  <div style="width:100%; display:table">
-    <label style="display:table-cell;width=1px;">留言标题:</label> <input name="fields[title]" type="text" placeholder="可选" style="display:table-cell; width:100%"><br>
-  </div>
-  <label>留言内容: <br><textarea name="fields[event]" rows="12" cols="48" placeholder="这里输入您的留言 必填" style="display:table-cell; width:100%"></textarea></label><br>
-  <input type="submit" value="猛击送出(Submit)">
-</form>
-{% include comments.html %}
+    <form method="POST" action="{{ site.staticman.api }}">
+      <input name="options[redirect]" type="hidden" value="{{ site.url }}">
+      <input name="options[slug]" type="hidden" value="test-slug">
+      <div style="width:100%; display:table">
+        <label style="display:table-cell;width=1px;">用户名:<input name="fields[user]" type="text" placeholder="用户名 必填" ></label>
+        <label style="display:table-cell;width=1px;">Email:</label> <input name="fields[email]" type="email" placeholder="Email 可选">
+      </div>
+      <div style="width:100%; display:table">
+        <label style="display:table-cell;width=1px;"> <input name="fields[title]" type="text" placeholder="留言标题 可选" style="display:table-cell; width:100%"></label>
+      </div>
+      <label>留言内容: <br><textarea name="fields[event]" rows="6" cols="48" placeholder="这里输入您的留言内容 必填" style="display:table-cell; width:100%"></textarea></label><br>
+      <input type="submit" value="猛击送出(Submit)">
+    </form>
 
-<footer>
-  <p><a href="https://validator.w3.org/nu/?doc={{ site.url | url_encode }}">Valid HTML5</a>
-  in public domain.</p>
-</footer>
+    {% include comments.html %}
+  </article>
+</div>
