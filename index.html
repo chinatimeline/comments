@@ -7,7 +7,7 @@ layout: default
     <h1>游客留言板</h1>
 
     <form method="POST" action="{{ site.staticman.api }}">
-      <input name="options[redirect]" type="hidden" value="{{ site.url }}">
+      <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ site.baseurl }}">
       <input name="options[slug]" type="hidden" value="test-slug">
       <div style="width:100%; display:table">
         <label style="display:table-cell;width=1px;">用户名:<input name="fields[user]" type="text" placeholder="用户名 必填" ></label>

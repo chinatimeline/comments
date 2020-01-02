@@ -1,5 +1,5 @@
 <div>
-  <h3>最近留言</h3>
+  <h2>最近留言</h2>
   {% assign comments = site.data.comments.test-slug | sort %}
   {% for comment in comments reversed %}
     {% assign commentData = comment[1] %}
@@ -9,10 +9,10 @@
       <div class="comment-event">
         {{ commentData.message | markdownify }}
       </div>
-      <p class="comment-date">
+      <p class="tag">
         @
         <a href="mailto:{{ commentData.email }}?subject=feedback">{{ commentData.user }}</a>,
-        留言时间: {{ commentData.submitTime | date: "%Y-%m-%d"}}
+        时间: {{ commentData.submitTime | date: "%Y-%m-%d"}}
        </p>
     </article>
   {% endfor %}
