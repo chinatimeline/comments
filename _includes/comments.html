@@ -1,17 +1,18 @@
 <div class="comments">
-  <h3>最近提交事件</h3>
+  <h3>最近留言</h3>
   {% assign comments = site.data.comments.test-slug | sort %}
   {% for comment in comments reversed %}
     {% assign commentData = comment[1] %}
     <article class="comment">
       <hr>
+      <h4>{{ commentData.title }}</h4>
       <div class="comment-event">
-        {{ commentData.event | markdownify }}
+        {{ commentData.message | markdownify }}
       </div>
-      <p class="comment-date">{{ commentData.date | date: "%Y-%m-%d" }},
-        类型：{{ commentData.type }}, 影响：{{ commentData.significance }}星,
-        <a href="{{ commentData.url }}">相关新闻</a>,
-        提交时间: {{ commentData.submitTime | date: "%Y-%m-%d"}}
+      <p class="comment-date">
+        @
+        <a href="mailto:{{ commentData.email }}?subject=feedback">{{ commentData.user }}</a>,
+        留言时间: {{ commentData.submitTime | date: "%Y-%m-%d"}}
        </p>
     </article>
   {% endfor %}

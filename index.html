@@ -7,20 +7,15 @@ layout: default
 <form method="POST" action="{{ site.staticman.api }}">
   <input name="options[redirect]" type="hidden" value="{{ site.url }}">
   <input name="options[slug]" type="hidden" value="test-slug">
-  <label>发生日期: <input name="fields[date]" type="date"></label><br>
-  <label>事件描述: <br><textarea name="fields[event]" rows="12" cols="48"></textarea></label><br>
-  <label>所属类型: <br>
-    {% for type in site.data.eventtype %}
-    <input name="fields[type]" type="radio" value="{{ type }}">{{ type }}<br>
-    {% endfor %}
-  </label><br>
-  <label>重要性:
-    {% for i in site.data.ratings %}
-    <input name="fields[significance]" type="radio" value="{{ i }}"> {{ i }}
-    {% endfor %}
-  </label><br>
-  <label>新闻链接: <input name="fields[url]" type="url"></label><br>
-  <input type="submit" value="点此提交(Submit)">
+  <div style="width:100%; display:table">
+    <label style="display:table-cell;width=1px;">用户名:<input name="fields[user]" type="text" placeholder="必填" ></label>
+    <label style="display:table-cell;width=1px;">邮箱Email:</label> <input name="fields[email]" type="email" placeholder="可选">
+  </div>
+  <div style="width:100%; display:table">
+    <label style="display:table-cell;width=1px;">留言标题:</label> <input name="fields[title]" type="text" placeholder="可选" style="display:table-cell; width:100%"><br>
+  </div>
+  <label>留言内容: <br><textarea name="fields[event]" rows="12" cols="48" placeholder="这里输入您的留言 必填" style="display:table-cell; width:100%"></textarea></label><br>
+  <input type="submit" value="猛击送出(Submit)">
 </form>
 {% include comments.html %}
 
