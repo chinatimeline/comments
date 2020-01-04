@@ -1,0 +1,6 @@
+_id: dafefca0-2f04-11ea-9ebc-a37ec4c57610
+user: 匿名用户
+email: ''
+title: 操作系统
+message: "一个即插即用（live）发行版，比如 Tails，是通往安全操作系统的最便捷的道路。你需要做的仅仅是使用项目文件创建一个可启动的光盘或 U 盘，然后用它们启动电脑即可，一切都预先设置好了。\r\n\r\n虚拟机（VM）镜像，比如 Whonix ，则是为虚拟环境，例如 VirtualBox 设计的。VirtualBox 可以安装在 Windows, Linux, macOS 和 Solaris 系统中。这意味着如果你因为一些原因不得不使用 Windows 或 macOS 之类的不安全系统，你可以使用虚拟机来提高安全性。\r\n\r\nhttps://prism-break.org/zh-CN/subcategories/macos-operating-systems-live/"
+submitTime: 1578150849
