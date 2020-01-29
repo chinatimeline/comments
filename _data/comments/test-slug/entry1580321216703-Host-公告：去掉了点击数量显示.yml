@@ -1,0 +1,7 @@
+_id: 22d73800-42c2-11ea-a53c-a7aa87b92f3f
+user: Host
+email: chinatimeline@protonmail.com
+title: 公告：去掉了点击数量显示
+message: >-
+  本站亲自向uBlockOrigin报告了freecounterstat和ticksel，经过沟通uBlockOrigin的默认列表已将这两个网站屏蔽。因此本站已去掉基于freecounterstat的点击计数器。详见[reddit.com/r/uBlockOrigin原帖](https://www.reddit.com/r/uBlockOrigin/comments/esz1l5/can_i_claim_a_tracking_script_privacy_friendly_if/)。
+submitTime: 1580321216
