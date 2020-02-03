@@ -917,25 +917,26 @@ background-color: #FF6600
  transform: translate(-50%, -50%);
 }
 
-#go-to-top{
-  display:none;
-  position:fixed;
-  right:30px;
-  bottom:30px;
-  padding:10px;
-  color:red;
-  background:#ddd;
-  font:24px/12px Helvetica,Arial,Verdana,sans-serif;
-  opacity:.7;
-  outline:0;
-  text-decoration:none;
-  text-shadow:0 0 1px #ddd;
-  vertical-align:baseline;
-  -moz-border-radius:5px;
-  -khtml-border-radius:5px;
-  -webkit-border-radius:5px;
-  border-radius:5px
+div#banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #DDEEEE;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
+
+div#banner-content {
+   width: 100%;
+   margin: 0 auto;
+   padding: 0px;
+   //color: #4B0082;
+   color: #8B0000;
+   font-size: 12px;
+ }
+
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
