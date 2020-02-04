@@ -1,19 +1,23 @@
 <div>
-  <h2>最近留言</h2>
-  {% assign comments = site.data.comments.test-slug | sort %}
-  {% for comment in comments reversed %}
-    {% assign commentData = comment[1] %}
-    <article class="comments">
-      <hr>
-      <h4>{{ commentData.title }}</h4>
-      <div class="comment-event">
-        {{ commentData.message | markdownify }}
-      </div>
-      <p class="tag">
-        @
-        <a href="mailto:{{ commentData.email }}?subject=feedback">{{ commentData.user }}</a>,
-        时间: {{ commentData.submitTime | date: "%Y-%m-%d"}}
-       </p>
-    </article>
+  <h2>{{ page.title }}</h2>
+  {% for slug in site.data.comments %}
+    {% if slug[0] == page.slug %}
+      {% assign comments = slug[1] | sort %}
+      {% for comment in comments reversed %}
+        {% assign commentData = comment[1] %}
+        <article class="comments">
+          <hr>
+          <h4>{{ commentData.title }}</h4>
+          <div class="comment-event">
+            {{ commentData.message | markdownify }}
+          </div>
+          <p class="tag">
+            @
+            <a href="mailto:{{ commentData.email }}?subject=feedback">{{ commentData.user }}</a>,
+            时间: {{ commentData.submitTime | date: "%Y-%m-%d"}}
+           </p>
+        </article>
+      {% endfor %}
+    {% endif %}
   {% endfor %}
 </div>
