@@ -1,0 +1,6 @@
+_id: 483cbd20-895f-11ea-a80d-f37a19247623
+user: bilibilixionggui
+email: ''
+title: 一键存档可能被和谐的网页的两个JS书签
+message: "新建书签栏书签，标题随便起，地址填上下面这行即可。遇到想保存镜像的网页，点击书签栏的该书签即可。\r\n\r\njavascript:void(open('https://archive.today/?run=1&url='+encodeURIComponent(document.location)))\r\n\r\ntoday可以替换为is、fo等。\r\n\r\njavascript:void(open('https://web.archive.org/save/'+(document.location)))"
+submitTime: 1588085291
