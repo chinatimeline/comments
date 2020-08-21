@@ -27,7 +27,7 @@ navigation:
   - name: FAQ
     url: https://chinatimeline.github.io/faq
   - name: 留言
-    url: https://chinatimeline.github.io/submit
+    url: https://chinatimeline.github.io/comments
   - name: 参与
     url: https://chinatimeline.github.io/how_to_contribute
   - name: 数据
@@ -79,7 +79,7 @@ url: # https://chinatimeline.github.io
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: "/submit"
+baseurl: "/comments"
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -119,5 +119,5 @@ exclude:
 
 
 staticman:
-  api: "https://staticman-chinatimeline.herokuapp.com/v3/entry/github/chinatimeline/submit/master/comments"
+  api: "https://staticman-chinatimeline.herokuapp.com/v3/entry/github/chinatimeline/comments/master/comments"
   path: "_data/events/test-slug"
